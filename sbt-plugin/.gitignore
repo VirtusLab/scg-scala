@@ -1,0 +1,15 @@
+.vscode
+*.class
+*.log
+
+.bsp
+
+target
+project/project
+project/target
+.cache
+.classpath
+.project
+.settings
+bin
+.semanticgraphs
