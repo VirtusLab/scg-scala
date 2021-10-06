@@ -20,8 +20,8 @@ object SemanticGraphsSbtPlugin extends AutoPlugin {
     //resolver for scalac-plugin, has to be in maven style, as scalac-plugin needs to be used also from maven build tool
     //resolvers += Resolver.bintrayRepo("virtuslab", "graphbuddy"),
     resolvers += "Local Maven Repository" at "file://" + Path.userHome.absolutePath + "/.m2/repository",
-    addCompilerPlugin("org.virtuslab.semanticgraphs" % "scalac-plugin" % "0.2.13" cross CrossVersion.full),
-    addCompilerPlugin("org.scalameta" % "semanticdb-scalac" % "4.4.22" cross CrossVersion.full),
+    addCompilerPlugin("org.virtuslab.semanticgraphs" % "scalac-plugin" % "0.2.14" cross CrossVersion.full),
+    addCompilerPlugin("org.scalameta" % "semanticdb-scalac" % "4.4.28" cross CrossVersion.full),
     cleanFiles += baseDirectory.value / ".semanticgraphs",
     scalacOptions += "-Yrangepos"
   )
