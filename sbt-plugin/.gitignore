@@ -13,3 +13,5 @@ project/target
 .settings
 bin
 .semanticgraphs
+.bloop
+.metals
