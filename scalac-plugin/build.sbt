@@ -1,10 +1,9 @@
 name := "scalac-plugin"
 
-version := "0.2.16"
+version := "0.2.17"
 
 ThisBuild / crossScalaVersions := Seq(
   "2.11.12",
-  "2.12.8",
   "2.12.9",
   "2.12.10",
   "2.12.11",
@@ -20,10 +19,12 @@ ThisBuild / crossScalaVersions := Seq(
   "2.13.5",
   "2.13.6",
   "2.13.7",
-  "2.13.8"
+  "2.13.8",
+  "2.13.9",
+  "2.13.10"
 )
 
-ThisBuild / scalaVersion := "2.13.8"
+ThisBuild / scalaVersion := "2.13.10"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint")
 scalacOptions += "-Ywarn-unused"
@@ -34,7 +35,7 @@ organization := "org.virtuslab.semanticgraphs"
 
 libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value
 
-libraryDependencies += "org.scalameta"              % "semanticdb-scalac-core" % "4.4.34" cross CrossVersion.full
+libraryDependencies += "org.scalameta"              % "semanticdb-scalac-core" % "4.6.0" cross CrossVersion.full
 libraryDependencies += "ch.qos.logback"             % "logback-classic"        % "1.2.10"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging"         % "3.9.4"
 
