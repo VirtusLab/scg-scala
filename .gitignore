@@ -1,2 +1,6 @@
 *.class
 *.log
+.metals
+.semanticgraphs
+.bsp
+.idea

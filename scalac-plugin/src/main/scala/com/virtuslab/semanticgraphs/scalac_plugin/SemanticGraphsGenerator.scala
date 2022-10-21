@@ -28,7 +28,7 @@ class SemanticGraphsGenerator(override val global: Global, projectRoot: Path) ex
   }
 
   def dumpFile(projectRoot: Path, semanticGraphFile: SemanticGraphFile) = {
-    val fileUri = s"${projectRoot.toAbsolutePath}/.semanticgraphs/${semanticGraphFile.getUri}.semanticgraphdb"
+    val fileUri = s"${projectRoot.toAbsolutePath}/.semanticgraphs/${semanticGraphFile.getUri}.scala.semanticgraphdb"
     import java.io.FileOutputStream
     val file = new File(fileUri)
     file.getParentFile.mkdirs()
