@@ -1,6 +1,6 @@
 name := "scalac-plugin"
 
-version := "0.2.17"
+version := "0.2.18"
 
 ThisBuild / crossScalaVersions := Seq(
   "2.11.12",

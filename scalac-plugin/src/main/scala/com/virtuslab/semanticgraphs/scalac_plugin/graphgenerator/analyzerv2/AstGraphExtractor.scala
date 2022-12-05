@@ -20,7 +20,13 @@ class AstGraphExtractor(graphAccumulator: GraphAccumulator, semanticDbHelper: Se
   def augmentTheInitialGraph(tree: Tree): SemanticGraphFile = tree match {
     case source: Source =>
       val fileNode =
-        ProtoHelper.createGraphNode(graphAccumulator.uri, "FILE", graphAccumulator.uri, new util.ArrayList[Edge]())
+        ProtoHelper.createGraphNode(
+          graphAccumulator.uri,
+          "FILE",
+          graphAccumulator.uri,
+          new util.ArrayList[Edge](),
+          ("LOC", (source.pos.endLine - source.pos.startLine).toString)
+        )
       graphAccumulator.addNode(fileNode)
       source.stats.foreach { stat =>
         Try(extractStat(stat, fileNode)) match {

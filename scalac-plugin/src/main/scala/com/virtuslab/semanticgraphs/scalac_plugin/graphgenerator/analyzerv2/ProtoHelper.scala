@@ -23,8 +23,8 @@ object ProtoHelper {
       edgeBuilder.build()
   }
 
-  def createGraphNode(id: String, kind: String, displayName: String, edges: java.util.List[Edge]): GraphNode =
-    GraphNode.newBuilder().setId(id).setKind(kind).setDisplayName(displayName).addAllEdges(edges).build()
+  def createGraphNode(id: String, kind: String, displayName: String, edges: java.util.List[Edge], property: (String, String)): GraphNode =
+    GraphNode.newBuilder().setId(id).setKind(kind).setDisplayName(displayName).addAllEdges(edges).putProperties(property._1, property._2).build()
 
   def createSemanticGraphFile(uri: String, nodes: java.util.List[GraphNode]): SemanticGraphFile = {
     SemanticGraphFile.newBuilder().setUri(uri).addAllNodes(nodes).build()
