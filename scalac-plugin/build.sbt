@@ -1,6 +1,6 @@
 name := "scalac-plugin"
 
-version := "0.2.18"
+version := "0.2.19"
 
 ThisBuild / crossScalaVersions := Seq(
   "2.11.12",
@@ -11,7 +11,9 @@ ThisBuild / crossScalaVersions := Seq(
   "2.12.13",
   "2.12.14",
   "2.12.15",
-  "2.13.0",
+  "2.12.16",
+  "2.12.17",
+  "2.12.18",
   "2.13.1",
   "2.13.2",
   "2.13.3",
@@ -21,10 +23,10 @@ ThisBuild / crossScalaVersions := Seq(
   "2.13.7",
   "2.13.8",
   "2.13.9",
-  "2.13.10"
+  "2.13.11"
 )
 
-ThisBuild / scalaVersion := "2.13.10"
+ThisBuild / scalaVersion := "2.13.11"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint")
 scalacOptions += "-Ywarn-unused"
@@ -35,9 +37,9 @@ organization := "org.virtuslab.semanticgraphs"
 
 libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value
 
-libraryDependencies += "org.scalameta"              % "semanticdb-scalac-core" % "4.6.0" cross CrossVersion.full
+libraryDependencies += "org.scalameta"              % "semanticdb-scalac-core" % "4.8.4" cross CrossVersion.full
 libraryDependencies += "ch.qos.logback"             % "logback-classic"        % "1.2.10"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging"         % "3.9.4"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging"         % "3.9.5"
 
 // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
 libraryDependencies += "com.google.protobuf" % "protobuf-java" % "3.12.4"
