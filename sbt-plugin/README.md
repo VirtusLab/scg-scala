@@ -14,5 +14,5 @@ sbt sonatypeBundleRelease
 In `project/graphbuddy.sbt` file:
 
 ```scala
-addSbtPlugin("com.virtuslab" % "semantic-graphs-sbt-plugin" % "0.2.18")
+addSbtPlugin("com.virtuslab" % "semantic-graphs-sbt-plugin" % "0.2.19")
 ```
