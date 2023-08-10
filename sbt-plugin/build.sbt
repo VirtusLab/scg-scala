@@ -1,6 +1,6 @@
 name := """sbt-plugin"""
 organization := "org.virtuslab.semanticgraphs"
-version := "0.2.19"
+version := "0.2.20"
 
 sbtPlugin := true
 

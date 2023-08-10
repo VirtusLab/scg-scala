@@ -10,5 +10,3 @@ Below command will publish separate artifact for each scala version defined in `
 sbt +publishSigned
 sbt sonatypeBundleRelease
 ```
-
-__Note: you need to have `~/.bintray/.credentails` configured__
